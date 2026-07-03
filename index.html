@@ -23,46 +23,35 @@
   }
   .wrap{max-width:640px; margin:0 auto;}
 
-  /* 헤더 */
   .hero{text-align:center; padding:10px 0 4px; user-select:none;}
   .hero .boat{font-size:46px; line-height:1;}
   .hero h1{margin:6px 0 2px; font-size:25px; font-weight:800; color:#1d6fb8; letter-spacing:-.5px;}
   .hero .sub{font-size:13.5px; color:#5b86a3; font-weight:600;}
-  .hero .verse{
-    display:inline-block; margin-top:10px; padding:5px 14px; border-radius:20px;
-    background:rgba(255,255,255,.7); font-size:12.5px; color:#2f7bb5; font-weight:700;
-  }
+  .hero .verse{display:inline-block; margin-top:10px; padding:5px 14px; border-radius:20px;
+    background:rgba(255,255,255,.7); font-size:12.5px; color:#2f7bb5; font-weight:700;}
 
-  /* 주제/장소 박스 */
-  .info{
-    background:#fff; border-radius:18px; padding:16px 18px; margin:18px 0;
-    box-shadow:0 6px 18px rgba(70,140,190,.14); font-size:14px; line-height:1.7;
-  }
+  .info{background:#fff; border-radius:18px; padding:16px 18px; margin:18px 0;
+    box-shadow:0 6px 18px rgba(70,140,190,.14); font-size:14px; line-height:1.7;}
   .info b{color:#1d6fb8;}
 
-  /* 탭 */
   .tabs{display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin:8px 0 20px;}
-  .tabs button{
-    border:none; padding:9px 15px; border-radius:22px; font-size:13.5px; font-weight:700;
+  .tabs button{border:none; padding:9px 15px; border-radius:22px; font-size:13.5px; font-weight:700;
     cursor:pointer; font-family:inherit; background:#fff; color:#5b86a3;
-    box-shadow:0 3px 8px rgba(70,140,190,.12); transition:.2s;
-  }
+    box-shadow:0 3px 8px rgba(70,140,190,.12); transition:.2s;}
   .tabs button.on{background:#3a9bdc; color:#fff; transform:translateY(-2px);}
+  .tabs button.cue{background:#fff; color:#c0568f;}
+  .tabs button.cue.on{background:#e0559a; color:#fff;}
 
-  /* 일정 카드 */
   .day{display:none; animation:fade .35s ease;}
   .day.show{display:block;}
   @keyframes fade{from{opacity:0; transform:translateY(8px);} to{opacity:1; transform:none;}}
-  .card{
-    background:#fff; border-radius:18px; padding:18px 20px; margin-bottom:14px;
-    box-shadow:0 6px 18px rgba(70,140,190,.14); transition:.25s;
-  }
+  .card{background:#fff; border-radius:18px; padding:18px 20px; margin-bottom:14px;
+    box-shadow:0 6px 18px rgba(70,140,190,.14); transition:.25s;}
   .card:hover{transform:translateY(-3px); box-shadow:0 10px 26px rgba(70,140,190,.22);}
   .card .date{font-size:13px; font-weight:800; color:#e08a2b; margin-bottom:4px;}
   .card .time{font-size:20px; font-weight:800; color:#1d6fb8; margin-bottom:8px;}
   .card .desc{font-size:14.5px; line-height:1.7; color:#3b5a70;}
 
-  /* 타임테이블 (2일차) */
   .tt{list-style:none; padding:0; margin:0;}
   .tt li{display:flex; align-items:flex-start; gap:12px; padding:9px 0; border-bottom:1px dashed #e0ecf5;}
   .tt li:last-child{border-bottom:none;}
@@ -70,21 +59,28 @@
   .tt .a{font-size:14.5px; color:#3b5a70; font-weight:600;}
   .tt .a.hl{color:#e0559a; font-weight:800;}
 
-  /* 강조 박스 */
-  .notice{
-    background:#fff3f7; border:2px solid #f7c1dc; border-radius:16px;
-    padding:14px 16px; margin-bottom:14px; font-size:14px; line-height:1.7;
-  }
+  .notice{background:#fff3f7; border:2px solid #f7c1dc; border-radius:16px;
+    padding:14px 16px; margin-bottom:14px; font-size:14px; line-height:1.7;}
   .notice b{color:#e0559a;}
 
-  /* 준비물 */
-  .prep{
-    background:#fff8e6; border:2px dashed #f2c46a; border-radius:16px;
-    padding:16px 18px; margin-bottom:14px; font-size:14px; line-height:1.75;
-  }
+  .prep{background:#fff8e6; border:2px dashed #f2c46a; border-radius:16px;
+    padding:16px 18px; margin-bottom:14px; font-size:14px; line-height:1.75;}
   .prep h3{margin:0 0 8px; font-size:15px; color:#d98a1c;}
   .prep .tag{display:inline-block; background:#3a9bdc; color:#fff; font-size:12px; font-weight:700; padding:3px 10px; border-radius:12px; margin:2px 3px;}
   .prep .tag.wt{background:#e9edf2; color:#546174;}
+
+  /* 큐시트 */
+  .cue-head{background:#fbeef5; border-radius:14px; padding:14px 16px; margin-bottom:12px; font-size:13.5px; line-height:1.7;}
+  .cue-head b{color:#e0559a;}
+  .cscroll{overflow-x:auto; -webkit-overflow-scrolling:touch; border-radius:14px; box-shadow:0 6px 18px rgba(70,140,190,.14);}
+  table.cue{border-collapse:collapse; width:100%; min-width:680px; background:#fff; font-size:12.5px;}
+  table.cue th{background:#3a9bdc; color:#fff; padding:9px 8px; font-weight:700; white-space:nowrap; position:sticky; top:0;}
+  table.cue td{padding:9px 8px; border-bottom:1px solid #eef4f9; vertical-align:top; line-height:1.55;}
+  table.cue tr:nth-child(even) td{background:#f8fbfe;}
+  table.cue .tm{font-weight:800; color:#1d6fb8; white-space:nowrap;}
+  table.cue .pg{font-weight:700; color:#2f5a78; white-space:nowrap;}
+  table.cue .wp{color:#e0559a; font-weight:700;}
+  .scroll-hint{text-align:center; font-size:11.5px; color:#9bb4c8; margin:6px 0 12px;}
 
   footer{text-align:center; margin-top:26px; font-size:12px; color:#7a9bb2;}
 </style>
@@ -104,13 +100,13 @@
     📅 <b>기간</b> · 7/4(토) 특별순서 ~ 7/12(주일)
   </div>
 
-  <!-- 탭 -->
   <div class="tabs">
     <button class="on" onclick="show(0,this)">🎬 특별순서</button>
     <button onclick="show(1,this)">1일차 7/5</button>
     <button onclick="show(2,this)">2일차 7/11</button>
     <button onclick="show(3,this)">3일차 7/12</button>
     <button onclick="show(4,this)">🎒 준비물</button>
+    <button class="cue" onclick="show(5,this)">📋 교사 큐시트</button>
   </div>
 
   <!-- 특별순서 -->
@@ -176,6 +172,162 @@
       <span class="tag wt">항해팀 · 꽃2과 · 열매2과</span> 흰색<br><br>
       자유롭게 입고 와도 좋지만, 가능하시다면 색을 맞춰주시면 감사하겠습니다 🙏<br>
       ※ <b>마린 스카프</b>는 유치부에서 당일에 나눠드립니다!
+    </div>
+  </div>
+
+  <!-- 교사 큐시트 -->
+  <div class="day">
+    <div class="cue-head">
+      📋 <b>7/11 (토) 교사 진행 큐시트</b> · 09:15 ~ 17:00<br>
+      <span style="color:#7a9bb2; font-size:12px;">※ 교사·스태프 내부용 · 표를 좌우로 넘겨서 보세요</span>
+    </div>
+    <div class="scroll-hint">← 좌우로 스크롤 →</div>
+    <div class="cscroll">
+      <table class="cue">
+        <thead>
+          <tr>
+            <th>시간</th><th>프로그램</th><th>활동내용</th><th>장소</th>
+            <th>담당·미디어</th><th>행정팀</th><th>헬퍼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tm">09:15<br>~09:30<br>(15′)</td>
+            <td class="pg">교사 경건회</td>
+            <td>경건회 및 맞으리<br>(이영미)</td>
+            <td>교사실</td>
+            <td>찬양 BGM<br>준비물 셋팅</td>
+            <td>1. 항해사 팔찌·마린 스카프<br>2. 포토존 점검<br>3. 출석체크</td>
+            <td>깃발·모자·조끼<br>꽃1과(빨) / 꽃2과(노)<br>열매1과(초) / 열매2과(파)</td>
+          </tr>
+          <tr>
+            <td class="tm">09:30<br>~10:00<br>(30′)</td>
+            <td class="pg">준비 및 환영</td>
+            <td>반 바구니 짐 담기<br>2과 공과 준비물 챙기기</td>
+            <td>유치부실</td>
+            <td>행정팀</td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td class="tm">10:00<br>~10:10<br>(10′)</td>
+            <td class="pg">예배 전 찬양</td>
+            <td>즐겁게 찬양해요<br>(지휘자·반주자)</td>
+            <td>유치부실</td>
+            <td>미디어: 효주·선주·예람<br>촬영: 지현</td>
+            <td>학부모교육 셋팅<br>간식: 정연옥</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td class="tm">10:10<br>~10:30<br>(20′)</td>
+            <td class="pg">예배</td>
+            <td>사회 예배인도(윤인준)<br>대표기도(정연옥)<br>설교 2과(이영미)</td>
+            <td>유치부실</td>
+            <td>미디어</td>
+            <td>10:10 복지관 세팅<br>(설희·혜진·윤배)<br>현수막·깃발·라인테이프·선장모자·호루라기 등</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td class="tm">10:30<br>~11:00<br>(30′)</td>
+            <td class="pg">공과활동 (2과)</td>
+            <td>학생·교사 교재 준비<br>포토존 사진 촬영 자유<br>(10:40~11:50 학부모교육)</td>
+            <td>각반</td>
+            <td>윤배·선주: 복지관 셋팅<br>지현: 촬영</td>
+            <td>10:30 학부모교육 셋팅<br>(예솔·에스더)</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td class="tm">11:00<br>~11:10<br>(10′)</td>
+            <td class="pg">복지관 이동</td>
+            <td>모든 짐 바구니 사이드 이동<br>(유아부 유치부실 사용)</td>
+            <td>충현<br>복지관</td>
+            <td>언가부실 1명 필요</td>
+            <td>10:55 경광봉 6개·하얀 모자<br>공용우산 복지관 1층에 두기</td>
+            <td>안전지도<br>화장실·정수기 안내<br>(수빈·하연)</td>
+          </tr>
+          <tr>
+            <td class="tm">11:10<br>~12:10<br>(60′)</td>
+            <td class="pg">대그룹활동</td>
+            <td class="wp">믿음의 항해 게임</td>
+            <td>충현<br>복지관</td>
+            <td>점수판 PPT<br>핸드마이크·BGM(경쾌)</td>
+            <td>응원 및 게임 참여</td>
+            <td>안전지도<br>지하2층·화장실·1층</td>
+          </tr>
+          <tr>
+            <td class="tm">12:10<br>~12:20<br>(10′)</td>
+            <td class="pg">사진촬영</td>
+            <td>단체 사진 (이윤배)<br>강대상 쪽 모여 앉기</td>
+            <td>복지관</td>
+            <td>촬영</td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td class="tm">12:20<br>~12:30<br>(10′)</td>
+            <td class="pg">유치부 이동</td>
+            <td>이동 (행정팀)</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td class="tm">12:30<br>~13:10<br>(40′)</td>
+            <td class="pg">점심식사</td>
+            <td>식사 (정연옥)<br>과별로 묶어 앉기</td>
+            <td>언가부실</td>
+            <td>좌석표 PPT<br>BGM(잔잔하게)</td>
+            <td>복지관 게임 물품 반납(16시)</td>
+            <td>물놀이 준비<br>수영장 물 확인·탈의실 천막·샤워시설·안전도우미</td>
+          </tr>
+          <tr>
+            <td class="tm">13:10<br>~13:30<br>(20′)</td>
+            <td class="pg">탈의</td>
+            <td>학생 집합 (이영미)<br>옷 갈아입히기</td>
+            <td>유치부실</td>
+            <td>—</td>
+            <td>파티션 설치(아름)<br>물총박스 나르기(에스더·예솔)</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td class="tm">13:30<br>~14:50<br>(80′)</td>
+            <td class="pg wp">조이 워터파크</td>
+            <td class="wp">워터파크 물놀이<br>(김민석 외)</td>
+            <td>야외</td>
+            <td>담임·반별 이동<br>안전 유의·개인 짐 관리<br>휴대용 마이크·스피커</td>
+            <td>짐바구니 옮기기(행정팀)<br>옥수수 낱개 포장·아이스크림(권사님팀)<br>젖은 빨래용 지퍼백(에스더·예솔)</td>
+            <td>워터파크 안전도우미<br>(헬퍼 필요)</td>
+          </tr>
+          <tr>
+            <td class="tm">14:50<br>~15:00<br>(10′)</td>
+            <td class="pg">기도회</td>
+            <td>마침 기도 (이영미)</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td class="tm">15:00~</td>
+            <td class="pg">광고 및 귀가</td>
+            <td>각반 담임<br>짐가방·간식·물총 챙기기</td>
+            <td>1층</td>
+            <td>—</td>
+            <td>간식: 아이스크림·옥수수<br>선물: 물총</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td class="tm">15:00<br>~17:00</td>
+            <td class="pg">교사 평가회</td>
+            <td>평가회 및 식사<br>(임지혁)</td>
+            <td>식당</td>
+            <td>—</td>
+            <td>삼계탕</td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 
