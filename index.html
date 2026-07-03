@@ -76,12 +76,15 @@
     box-shadow:0 5px 15px rgba(70,140,190,.18); border:1px solid #d5eafb; border-left:6px solid #3a9bdc; transition:.25s;}
   .qcard:hover{transform:translateY(-2px); box-shadow:0 9px 22px rgba(70,140,190,.2);}
   .qcard.water{border-left-color:#e0559a; background:#fff6fb;}
-  .qcard .qtop{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; margin-bottom:8px;}
+  .qcard .qtop{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; margin-bottom:10px;
+    background:#dcefff; margin:-15px -17px 12px; padding:11px 17px;
+    border-radius:16px 16px 0 0; border-bottom:2px solid #b9dcf7;}
   .qcard .qtime{font-weight:800; color:#1565a3; font-size:15.5px;}
   .qcard.water .qtime{color:#e0559a;}
   .qcard .qmin{font-size:11.5px; color:#9bb4c8; font-weight:700;}
   .qcard .qname{font-weight:800; color:#2f5a78; font-size:15px;}
   .qcard.water .qname{color:#e0559a;}
+  .qcard.water .qtop{background:#ffe3f1; border-bottom-color:#f7c1dc;}
   .qcard .qrow{display:flex; gap:8px; font-size:13px; line-height:1.6; padding:3px 0; border-top:1px dashed #eef4f9;}
   .qcard .qrow:first-of-type{border-top:none;}
   .qcard .qlabel{flex-shrink:0; width:52px; font-weight:700; color:#7a9bb2; font-size:12px;}
@@ -142,6 +145,8 @@
   body.dark .qcard .qtime{color:#7ec4ef;}
   body.dark .qcard.water .qtime{color:#f77fb8;}
   body.dark .qcard .qname{color:#c5d6e3;}
+  body.dark .qcard .qtop{background:#22405c; border-bottom-color:#2f5a80;}
+  body.dark .qcard.water .qtop{background:#3a2333; border-bottom-color:#5a3247;}
   body.dark .qcard.water .qname{color:#f77fb8;}
   body.dark .qcard .qrow{border-top-color:#2a4056;}
   body.dark .qcard .qlabel{color:#8ba7bd;}
