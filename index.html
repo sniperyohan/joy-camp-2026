@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>충현 JOY유치부 · 여름성경학교</title>
+
+<!-- 카톡/문자 링크 미리보기 -->
+<meta property="og:title" content="충현 JOY유치부 여름성경학교">
+<meta property="og:description" content="예수님과 함께하는 믿음의 항해 ⛵ 일정을 확인하세요!">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://joy-camp-2026.pages.dev">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" rel="stylesheet">
+<style>
+  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+  body{
+    font-family:'Pretendard',sans-serif; margin:0; padding:18px 14px 44px; min-height:100vh;
+    background:linear-gradient(180deg,#cdeafd 0%,#e8f7ff 40%,#fff6e0 100%);
+    color:#264a63;
+  }
+  .wrap{max-width:640px; margin:0 auto;}
+
+  /* 헤더 */
+  .hero{text-align:center; padding:10px 0 4px; user-select:none;}
+  .hero .boat{font-size:46px; line-height:1;}
+  .hero h1{margin:6px 0 2px; font-size:25px; font-weight:800; color:#1d6fb8; letter-spacing:-.5px;}
+  .hero .sub{font-size:13.5px; color:#5b86a3; font-weight:600;}
+  .hero .verse{
+    display:inline-block; margin-top:10px; padding:5px 14px; border-radius:20px;
+    background:rgba(255,255,255,.7); font-size:12.5px; color:#2f7bb5; font-weight:700;
+  }
+
+  /* 주제/장소 박스 */
+  .info{
+    background:#fff; border-radius:18px; padding:16px 18px; margin:18px 0;
+    box-shadow:0 6px 18px rgba(70,140,190,.14); font-size:14px; line-height:1.7;
+  }
+  .info b{color:#1d6fb8;}
+
+  /* 탭 */
+  .tabs{display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin:8px 0 20px;}
+  .tabs button{
+    border:none; padding:9px 15px; border-radius:22px; font-size:13.5px; font-weight:700;
+    cursor:pointer; font-family:inherit; background:#fff; color:#5b86a3;
+    box-shadow:0 3px 8px rgba(70,140,190,.12); transition:.2s;
+  }
+  .tabs button.on{background:#3a9bdc; color:#fff; transform:translateY(-2px);}
+
+  /* 일정 카드 */
+  .day{display:none; animation:fade .35s ease;}
+  .day.show{display:block;}
+  @keyframes fade{from{opacity:0; transform:translateY(8px);} to{opacity:1; transform:none;}}
+  .card{
+    background:#fff; border-radius:18px; padding:18px 20px; margin-bottom:14px;
+    box-shadow:0 6px 18px rgba(70,140,190,.14); transition:.25s;
+  }
+  .card:hover{transform:translateY(-3px); box-shadow:0 10px 26px rgba(70,140,190,.22);}
+  .card .date{font-size:13px; font-weight:800; color:#e08a2b; margin-bottom:4px;}
+  .card .time{font-size:20px; font-weight:800; color:#1d6fb8; margin-bottom:8px;}
+  .card .desc{font-size:14.5px; line-height:1.7; color:#3b5a70;}
+
+  /* 타임테이블 (2일차) */
+  .tt{list-style:none; padding:0; margin:0;}
+  .tt li{display:flex; align-items:flex-start; gap:12px; padding:9px 0; border-bottom:1px dashed #e0ecf5;}
+  .tt li:last-child{border-bottom:none;}
+  .tt .t{flex-shrink:0; width:108px; font-weight:800; color:#2f7bb5; font-size:13.5px;}
+  .tt .a{font-size:14.5px; color:#3b5a70; font-weight:600;}
+  .tt .a.hl{color:#e0559a; font-weight:800;}
+
+  /* 강조 박스 */
+  .notice{
+    background:#fff3f7; border:2px solid #f7c1dc; border-radius:16px;
+    padding:14px 16px; margin-bottom:14px; font-size:14px; line-height:1.7;
+  }
+  .notice b{color:#e0559a;}
+
+  /* 준비물 */
+  .prep{
+    background:#fff8e6; border:2px dashed #f2c46a; border-radius:16px;
+    padding:16px 18px; margin-bottom:14px; font-size:14px; line-height:1.75;
+  }
+  .prep h3{margin:0 0 8px; font-size:15px; color:#d98a1c;}
+  .prep .tag{display:inline-block; background:#3a9bdc; color:#fff; font-size:12px; font-weight:700; padding:3px 10px; border-radius:12px; margin:2px 3px;}
+  .prep .tag.wt{background:#e9edf2; color:#546174;}
+
+  footer{text-align:center; margin-top:26px; font-size:12px; color:#7a9bb2;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="boat">⛵</div>
+    <h1>충현 JOY유치부 여름성경학교</h1>
+    <div class="sub">예수님과 함께하는 믿음의 항해</div>
+    <div class="verse">📖 히브리서 12:2</div>
+  </div>
+
+  <div class="info">
+    🏫 <b>장소</b> · 충현교회 제1교육관 2층 유치부실<br>
+    📅 <b>기간</b> · 7/4(토) 특별순서 ~ 7/12(주일)
+  </div>
+
+  <!-- 탭 -->
+  <div class="tabs">
+    <button class="on" onclick="show(0,this)">🎬 특별순서</button>
+    <button onclick="show(1,this)">1일차 7/5</button>
+    <button onclick="show(2,this)">2일차 7/11</button>
+    <button onclick="show(3,this)">3일차 7/12</button>
+    <button onclick="show(4,this)">🎒 준비물</button>
+  </div>
+
+  <!-- 특별순서 -->
+  <div class="day show">
+    <div class="card">
+      <div class="date">7/4 (토) · 특별순서</div>
+      <div class="time">JOY CINEMA 🎬</div>
+      <div class="desc">영화 <b>'다윗'</b> 관람<br>함께 모여 즐거운 영화 시간을 가져요!</div>
+    </div>
+  </div>
+
+  <!-- 1일차 -->
+  <div class="day">
+    <div class="card">
+      <div class="date">7/5 (주일) · 1일차</div>
+      <div class="time">10:40 ~ 12:10</div>
+      <div class="desc">믿음의 항해가 시작돼요! ⛵<br>예수님과 함께하는 첫 만남</div>
+    </div>
+  </div>
+
+  <!-- 2일차 -->
+  <div class="day">
+    <div class="card">
+      <div class="date">7/11 (토) · 2일차 · 물놀이 데이 🌊</div>
+      <div class="time">10:00 ~ 15:00</div>
+      <ul class="tt">
+        <li><span class="t">~ 10:00</span><span class="a">유치부실로 모여라! 🙌</span></li>
+        <li><span class="t">10:00 ~ 10:30</span><span class="a">예배드려요</span></li>
+        <li><span class="t">10:30 ~ 11:00</span><span class="a">반별 공과</span></li>
+        <li><span class="t">11:00 ~ 12:30</span><span class="a">믿음의 항해 게임 (실내)</span></li>
+        <li><span class="t">12:30 ~ 13:10</span><span class="a">점심 식사 🍚</span></li>
+        <li><span class="t">13:30 ~ 14:50</span><span class="a hl">조이 워터파크 (본당 뒷마당) 💦</span></li>
+        <li><span class="t">14:50 ~ 15:00</span><span class="a">마침기도, 집으로~</span></li>
+      </ul>
+    </div>
+    <div class="notice">
+      🚸 <b>오후 3시, 본당 뒷마당</b>에서 물놀이 후 바로 자녀를 만나주세요!<br>
+      ※ 이 날은 <b>기도회가 없습니다.</b>
+    </div>
+  </div>
+
+  <!-- 3일차 -->
+  <div class="day">
+    <div class="card">
+      <div class="date">7/12 (주일) · 3일차</div>
+      <div class="time">10:40 ~ 12:10</div>
+      <div class="desc">믿음의 항해를 마무리해요 🎉<br>은혜로운 마지막 시간</div>
+    </div>
+  </div>
+
+  <!-- 준비물 -->
+  <div class="day">
+    <div class="prep">
+      <h3>🏊 준비물 ① · 물놀이 (7/11 토)</h3>
+      타올, 여벌옷, 래쉬가드,<br>
+      물놀이용 신발, 젖은 옷 담을 가방을 준비해주세요.<br>
+      👉 <b>모든 짐에는 이름을 꼭 써주세요!</b>
+    </div>
+    <div class="prep">
+      <h3>👕 준비물 ② · 팀별 티셔츠 (7/11 토)</h3>
+      팀 게임을 위해 색깔에 맞춰 입고 와주세요:<br><br>
+      <span class="tag">믿음팀 · 꽃1과 · 열매1과</span> 블루 / 네이비 / 블랙<br>
+      <span class="tag wt">항해팀 · 꽃2과 · 열매2과</span> 흰색<br><br>
+      자유롭게 입고 와도 좋지만, 가능하시다면 색을 맞춰주시면 감사하겠습니다 🙏<br>
+      ※ <b>마린 스카프</b>는 유치부에서 당일에 나눠드립니다!
+    </div>
+  </div>
+
+  <footer>충현교회 JOY유치부 · 예수님과 함께하는 믿음의 항해 ⛵</footer>
+</div>
+
+<script>
+  function show(i, btn){
+    document.querySelectorAll('.day').forEach((d,idx)=>d.classList.toggle('show', idx===i));
+    document.querySelectorAll('.tabs button').forEach(b=>b.classList.remove('on'));
+    btn.classList.add('on');
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+</script>
+</body>
+</html>
